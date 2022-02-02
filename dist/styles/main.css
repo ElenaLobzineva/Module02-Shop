@@ -1,6 +1,1 @@
-/*!***************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/main.scss ***!
-  \***************************************************************************************************************/
-body {
-  background-color: #eee;
-}
+.header{max-width:1440px;margin:0 auto;padding-left:15px;padding-right:15px;display:flex;justify-content:space-between;align-items:center}.header__nav{display:flex;list-style-type:none;margin:0;padding-left:0;gap:48px}.header__link{font-size:16px;text-decoration:none;color:#27300f}.header__link:hover{color:#d26a22}.header__tel{font-size:16px;color:#27300f;text-decoration:none}.header__tel:hover{color:#d26a22}.header__cart{display:block;background-image:url(../images/2aa2007328c7c4181e11.svg);background-color:#d26a22;width:40px;height:40px;border-radius:100%;background-size:17px 15px;background-repeat:no-repeat;background-position:center center;position:relative}.header__counter{font-style:8px;color:#fff;position:absolute;right:10px;top:6px}.logo{display:block;background-image:url(../images/4e6afe2526f3d2f21ffa.svg);background-repeat:no-repeat;background-size:cover;width:123px;height:32px}
