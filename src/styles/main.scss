@@ -135,17 +135,18 @@ body {
         width: 92%;
     }
     &__text {
+        padding-top: 4rem;
     
     }
     &__btn {
-        cursor: pointer;
+       
         background-color: transparent;
         border: none;
         padding: 0;
         position: absolute;
         color: $green;
         text-align: left;
-
+        z-index: 100;
         &:hover {
             .main__btn {
                 &::before {
@@ -207,7 +208,7 @@ body {
     }
     &__avocado {
         position: absolute;
-        top: 5.6rem;
+        top: 56px;
         right: 0;
         width: 15rem;
         z-index: -1;
@@ -241,6 +242,7 @@ body {
     font-size: 8rem;
     line-height: 1;
     margin: 0;
+    letter-spacing: 0.16rem;
     &__span {
         font-style: italic;
     }
@@ -280,7 +282,7 @@ body {
     background-position-x: center;
     background-repeat: no-repeat;
     padding-top: 2rem;
-    padding-bottom: 200px;
+    padding-bottom: 128px;
     &__text {
         margin-top: 6rem;
         max-width: 700px;
@@ -294,18 +296,108 @@ body {
     overflow: initial;
     &-slide {
         border: 1px solid $green;
+        border-radius: 2rem;
+        padding: 4rem 3.7rem;
+        box-sizing: border-box;
+        height: 520px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+      z-index: 0;
+        &:hover {
+            box-shadow:  0 0 0 2px rgba($green, 0.4) inset;
+            .swiper-slide__hover {
+                height: 233px;
+                opacity: 1;
+            }
+            &::after {
+                content: '';
+                background-color: rgba($white, .55);
+                width: calc(100% - 4px);
+                height: calc(100% - 4px);
+                position: absolute;left: 0%;
+                top: 2px;
+                left: 2px;
+                border-radius: 2rem;
+                z-index: -1;
+            }
+        }
+        &_milk {
+            background-image: (url(../images/milk.png));
+        }
+        &_pasta {
+            background-image: (url(../images/pasta.png));
+        }
+        &_steaks {
+            background-image: (url(../images/steaks.png));
+        }
+        &__title {
+            font-family: $font-cormorant;
+            font-size: 3rem;
+            color: $green;
+            margin-bottom: 0;
+        }
+        &__hover{
+            height: 0;
+            opacity: 0;
+        }
+        &__text {
+            color: rgba($green, 0.7);
+            line-height: 1.5;
+            margin-top: 2.5rem;
+            margin-bottom: 3.4rem;
+            max-width: 263px;
+        }
+        &__link {
+            text-transform: uppercase;
+            font-weight: 500;
+            color: rgba($green, .8);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            letter-spacing: 0.1rem;
+            opacity: .8;
+            transition: .3s;
+            &:hover {
+                opacity: 1;
+            }
+            &::before {
+                content: '';
+                display: block;
+                width: 3rem;
+                height: 3rem;
+                background-image: url(../images/plus.svg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                opacity: 0.8;
+            }
+
+        }
     }
     &-pagination {
         display: none;
     }
     &-button-next, &-button-prev {
         top: -60px;
+        &:hover  {
+            &::after {
+                color: rgba($green, 1);
+            }
+        }
         &::after {
-            color: $green;
+            color: rgba($green, .4);
+            font-size: 20px;
         }
-        }
+    }
+    &-button-next {
+        right: -8px;
+    }
     &-button-prev {
         left: initial;
-        right: 100px;
+        right: 72px;
     }
 }
